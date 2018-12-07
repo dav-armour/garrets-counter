@@ -1,5 +1,5 @@
 // Define variables and require modules
-const mongoose = require('mongoose'), express = require('express'), app = express(), bodyParser = require('body-parser'), port = 3000;
+const mongoose = require('mongoose'), express = require('express'), app = express(), bodyParser = require('body-parser');
 let db = mongoose.connection;
 require('dotenv').config();  
 // // const favicon = require('serve-favicon'); app.use(favicon(__dirname + '/faviconn.ico'))
@@ -81,5 +81,5 @@ db.once('open', function() { console.log("We're connected to mongo!")
 
 
     // Opens up localhost:3000
-    app.listen(port, () => console.log(`App listening on port ${port}!`))
+    app.listen(process.env.PORT || 3000, () => console.log(`App listening on port ${port}!`))
 });
