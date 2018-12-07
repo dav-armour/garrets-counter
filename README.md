@@ -9,4 +9,4 @@ The count persists in the database (using MLAB) so that the counter holds the to
 
 ---
 
-![Screenshot](https://github.com/brasscapon/garrets-counter/tree/master/assets/screenshot.png)
+![Screenshot](https://github.com/brasscapon/garrets-counter/blob/master/assets/screenshot.png)
