@@ -10,3 +10,15 @@ The count persists in the database (using MLAB) so that the counter holds the to
 ---
 
 ![Screenshot](https://github.com/brasscapon/garrets-counter/blob/master/assets/screenshot.png)
+
+# Tools used
+* Express
+* MongoDB & Mongoose
+* MLAB
+* Materialize Icons
+* Unsplash
+* Google Fonts
+* VS Code
+* Heroku
+* Dotenv
+* Express-handlebars
