@@ -2,7 +2,7 @@
 const mongoose = require('mongoose'), express = require('express'), app = express(), bodyParser = require('body-parser');
 let db = mongoose.connection;
 require('dotenv').config();  
-// // const favicon = require('serve-favicon'); app.use(favicon(__dirname + '/faviconn.ico'))
+const favicon = require('serve-favicon'); app.use(favicon(__dirname + '/favicon.ico'))
 // app.use(express.favicon('/favicon.ico'));
 //config hbars
 const exphbs = require('express-handlebars'); app.set('views', './views'); app.engine('handlebars', exphbs({defaultLayout: 'main'})); app.set('view engine', 'handlebars'); app.use(express.static('views/images'));
