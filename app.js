@@ -1,8 +1,11 @@
 // Define variables and require modules
 const mongoose = require('mongoose'), express = require('express'), app = express(), bodyParser = require('body-parser'), port = 3000;
 let db = mongoose.connection;
-require('dotenv').config(); 
-const exphbs = require('express-handlebars'); app.set('views', './views'); app.engine('handlebars', exphbs({defaultLayout: 'main'})); app.set('view engine', 'handlebars'); //config hbars
+require('dotenv').config();  
+// // const favicon = require('serve-favicon'); app.use(favicon(__dirname + '/faviconn.ico'))
+// app.use(express.favicon('/favicon.ico'));
+//config hbars
+const exphbs = require('express-handlebars'); app.set('views', './views'); app.engine('handlebars', exphbs({defaultLayout: 'main'})); app.set('view engine', 'handlebars'); app.use(express.static('views/images'));
 
 // Connect to the db @ MLAB
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
@@ -22,11 +25,11 @@ db.once('open', function() { console.log("We're connected to mongo!")
     //     console.log(count);
     // });
 
-    // Return all objects in the model
-    CountModel.find(function (err, kittens) {
-        if (err) return err;
-        console.log(kittens);
-    })
+    // // Return all objects in the model
+    // CountModel.find(function (err, kittens) {
+    //     if (err) return err;
+    //     console.log(kittens);
+    // })
 
 
 
